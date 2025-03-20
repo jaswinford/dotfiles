@@ -5,7 +5,6 @@ import os
 
 ansible_cmd = [
     "ansible-playbook",
-    "--ask-become-pass",
     os.path.expanduser("~/dotfiles/bootstrap.yml"),
 ]
 
