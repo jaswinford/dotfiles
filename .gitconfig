@@ -5,6 +5,8 @@
 	verbose = true
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main
 [push]
 	default = current
 [rebase]
