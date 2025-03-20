@@ -30,3 +30,8 @@
       import_role:
         name: stow
 
+    - name: Setup kubectl
+      tags: kubectl
+      import_role:
+        name: kubectl
+
