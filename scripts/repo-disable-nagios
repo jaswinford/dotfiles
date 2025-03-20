@@ -1,0 +1,23 @@
+#!/bin/bash
+
+filename="/etc/apt/sources.list.d/nagios.list"
+
+if [ ! -f "$filename" ]; then
+  echo "Error: File '$filename' not found."
+  exit 1
+fi
+
+# Create a temporary file to store the modified content
+temp_file=$(mktemp)
+
+# Read the original file line by line and prepend '#' to each line
+while IFS= read -r line; do
+  echo "#$line" >> "$temp_file"
+done < "$filename"
+
+# Replace the original file with the modified content
+mv "$temp_file" "$filename"
+
+echo "Successfully disabled repo."
+
+exit 0
