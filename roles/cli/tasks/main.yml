@@ -1,0 +1,63 @@
+---
+- name: Install OSX command line tools
+  include_role:
+    name: elliotweiser.osx-command-line-tools
+  when: ansible_distribution == "MacOSX"
+
+- name: Create directory ~/.local/bin/
+  file:
+    path: "{{ ansible_env.HOME }}/.local/bin"
+    state: directory
+    mode: 0755
+
+- name: Install CLI tools in Ubuntu
+  become: true
+  apt:
+    name:
+      - tig
+      - tmux
+      - ripgrep
+      - fd-find
+      - jq
+      - htop
+      - python3-pip
+      - unzip
+      - xclip
+      - moreutils
+    state: present
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install CLI tools in Fedora
+  become: true
+  dnf:
+    name:
+      - tmux
+      - ripgrep
+      - fd-find
+      - jq
+      - htop
+      - python3-pip
+      - xclip
+      - moreutils
+    state: present
+  when: ansible_distribution == "Fedora"
+
+- name: Install CLI tools in macOS
+  loop:
+    - tmux
+    - ripgrep
+    - fd
+    - jq
+    - htop
+    - moreutils
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  when: ansible_distribution == "MacOSX"
+
+- name: Install Oh My ZSH
+  import_tasks: zsh.yml
+
+- name: Install WSL utilities
+  import_tasks: wsl.yml
+  when: ansible_kernel is search("microsoft")

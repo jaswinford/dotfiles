@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+export PATH="$PATH:~/.local/bin"
+ansible-galaxy install -r requirements.yml

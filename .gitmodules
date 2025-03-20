@@ -1,0 +1,3 @@
+[submodule "deps/nvim"]
+	path = deps/nvim
+	url = https://github.com/neovim/neovim.git

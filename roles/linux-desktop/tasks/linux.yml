@@ -1,0 +1,10 @@
+---
+- name: Setup Flatpak and apps
+  import_tasks: flatpak.yml
+
+- name: Setup Fedora
+  import_tasks: fedora.yml
+  when: ansible_distribution == "Fedora"
+
+- name: Configure GNOME
+  import_tasks: gnome.yml
