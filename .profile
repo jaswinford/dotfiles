@@ -100,6 +100,8 @@ export LESS="FXRM"
 
 alias r='ranger'
 
+alias k='kubectl'
+
 if is_linux; then
   alias ls='ls -A --color=auto --group-directories-first --time-style=long-iso --human-readable -v'
   alias ll='ls -l'
