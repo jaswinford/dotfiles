@@ -7,3 +7,4 @@ venv
 !.config/Code/User/keybindings.json
 .vim
 *.swp
+*.mdb
