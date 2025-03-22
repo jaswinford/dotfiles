@@ -1,9 +1,3 @@
-- name: Install tmux
-  become: true
-  ansible.builtin.package:
-    state: present
-    name: tmux
-
 - name: Checkout TPM
   ansible.builtin.git:
     repo: https://github.com/tmux-plugins/tpm

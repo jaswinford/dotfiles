@@ -4,3 +4,4 @@ set -e
 
 export PATH="$PATH:~/.local/bin"
 ansible-galaxy install -r requirements.yml
+ansible-playbook bootstrap.yml
