@@ -4,3 +4,6 @@
 [submodule "deps/zsh-dracula"]
 	path = deps/zsh-dracula
 	url = https://github.com/dracula/zsh.git
+[submodule "deps/dracula-alacritty"]
+	path = deps/dracula-alacritty
+	url = https://github.com/dracula/alacritty.git
