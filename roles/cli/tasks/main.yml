@@ -14,6 +14,10 @@
   become: true
   apt:
     name:
+      - git
+      - zsh
+      - unzip
+      - fonts-powerline
       - tig
       - tmux
       - ripgrep
@@ -31,6 +35,9 @@
   become: true
   dnf:
     name:
+      - git
+      - zsh
+      - unzip
       - tmux
       - ripgrep
       - fd-find
@@ -44,6 +51,8 @@
 
 - name: Install CLI tools in macOS
   loop:
+    - git
+    - unzip
     - tmux
     - ripgrep
     - fd
