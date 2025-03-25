@@ -99,6 +99,7 @@ fi
 export LESS="FXRM"
 
 alias r='ranger'
+alias vim='nvim'
 
 alias k='kubectl'
 
