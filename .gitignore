@@ -8,3 +8,5 @@ venv
 .vim
 *.swp
 !.config/zed/prompts/*
+.config/go/
+.config/htop/
