@@ -10,3 +10,5 @@ venv
 !.config/zed/prompts/*
 .config/go/
 .config/htop/
+.config/zed/prompts
+.config/zed/conversations
