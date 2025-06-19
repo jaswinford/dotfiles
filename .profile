@@ -53,7 +53,9 @@ if [ -d "$HOME/.poetry" ]; then
 fi
 
 # Add Go related PATH
-export GOPATH="$HOME/go"
+if [ -d "$HOME/go" ]; then
+	export GOPATH="$HOME/go"
+fi
 
 if [ -d "$GOPATH" ]; then
   export PATH="$PATH:$GOPATH/bin"
@@ -104,7 +106,7 @@ alias vim='nvim'
 alias k='kubectl'
 
 if is_linux; then
-  alias ls='ls -A --color=auto --group-directories-first --time-style=long-iso --human-readable -v'
+  alias ls='ls --color=auto --group-directories-first --time-style=long-iso --human-readable -v'
   alias ll='ls -l'
 fi
 
