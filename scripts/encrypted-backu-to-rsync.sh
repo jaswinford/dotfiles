@@ -2,9 +2,9 @@
 
     # Configuration
     SOURCE_DIR="/mnt/backup"
-    REMOTE_USER="your_remote_user"
-    REMOTE_HOST="your_remote_host"
-    REMOTE_PATH="/path/to/remote/backup"
+    REMOTE_USER="de2368"
+    REMOTE_HOST="de2368.rsync.net"
+    REMOTE_PATH="/backups"
     GPG_RECIPIENT="aswinford@jadam.space"
 
     # Function to encrypt and transfer a single file
