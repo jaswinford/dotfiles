@@ -1,0 +1,39 @@
+
+# Specify the directory containing the files (default is the current directory)
+directory="${1:-"."}"
+
+# Check if the directory exists
+if [ ! -d "$directory" ]; then
+  echo "Error: Directory '$directory' not found."
+  exit 1
+fi
+
+# Iterate through each file in the directory
+find "$directory" -maxdepth 1 -type f -print0 | while IFS= read -r -d $'\0' file; do
+  # Extract the filename without the extension
+  filename=$(basename "$file")
+  extension="${filename##*.}"  # Extract the extension
+  filename="${filename%.*}"     # Remove the extension
+
+  # Create the directory if it doesn't exist
+  new_dir="$directory/$filename"
+  if [ ! -d "$new_dir" ]; then
+    mkdir "$new_dir"
+    if [ $? -ne 0 ]; then # Check if mkdir was successful
+        echo "Error: Failed to create directory '$new_dir'."
+        exit 1
+    fi
+  fi
+
+  # Move the file into the directory
+  mv "$file" "$new_dir/"
+  if [ $? -ne 0 ]; then # Check if mv was successful
+        echo "Error: Failed to move file '$file' to '$new_dir'."
+        exit 1
+  fi
+
+done
+
+echo "Finished processing files in '$directory'."
+
+exit 0
