@@ -12,3 +12,4 @@ venv
 .config/htop/
 .config/zed/prompts
 .config/zed/conversations
+.config/JetBrains
