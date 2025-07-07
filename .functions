@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Function to change to a specific JD directory
+cdj(){
+
+	pushd ~/Documents/*/*/${1}*
+
+}

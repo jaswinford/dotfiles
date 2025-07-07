@@ -11,10 +11,6 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
-source ~/.profile
-
 # Load custom aliases and functions
 
 if [ -f ~/.aliases ]; then
@@ -24,4 +20,11 @@ fi
 if [ -f ~/.functions ]; then
 	source ~/.functions
 fi
+
+# Load Oh My Zsh
+source $ZSH/oh-my-zsh.sh
+
+# Load custom profile settings
+source ~/.profile
+
 
