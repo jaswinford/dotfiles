@@ -14,3 +14,14 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 source ~/.profile
+
+# Load custom aliases and functions
+
+if [ -f ~/.aliases ]; then
+	source ~/.aliases
+fi
+
+if [ -f ~/.functions ]; then
+	source ~/.functions
+fi
+
