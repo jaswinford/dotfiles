@@ -3,9 +3,9 @@ local Plug = vim.fn['plug#']
 
 vim.o.background = 'dark'
 
+
 vim.call('plug#begin')
 
-Plug('morhetz/gruvbox')
 Plug('kyazdani42/nvim-tree.lua')
 Plug('kyazdani42/nvim-web-devicons')
 Plug('romgrk/barbar.nvim')
@@ -17,6 +17,7 @@ Plug('ibhagwan/fzf-lua')
 Plug('numToStr/Comment.nvim')
 Plug('folke/trouble.nvim')
 Plug('f-person/git-blame.nvim')
+Plug('rebelot/kanagawa.nvim')
 
 vim.call('plug#end')
 
