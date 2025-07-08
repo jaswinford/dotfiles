@@ -12,6 +12,12 @@
     name:
       - keychain
 
+- name: Install neovim in Ubuntu
+  become: true
+  ansible.builtin.apt:
+    name:
+      - neovim
+
 - name: Install wslu in Ubuntu
   become: true
   ansible.builtin.apt:

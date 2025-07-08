@@ -24,18 +24,6 @@
     dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     depth: 1
 
-- name: Install Dracula theme for zsh
-  ansible.builtin.copy:
-    src: deps/zsh-dracula/dracula.zsh-theme
-    dest: ~/.oh-my-zsh/themes/dracula.zsh-theme
-    owner: "{{ ansible_user_id }}"
-
-- name: Install Dracula theme libraries
-  ansible.builtin.copy:
-    src: deps/zsh-dracula/lib
-    dest: ~/.oh-my-zsh/themes
-    owner: "{{ ansible_user_id }}"
- 
 - name: Change user shell to zsh 
   become: true
   ansible.builtin.user:

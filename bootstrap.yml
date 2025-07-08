@@ -2,13 +2,12 @@
 - name: Bootstrap environment
   hosts: localhost
   tasks:
-    - name: Update all submodules
-      tags:
-        - submodules
-        - nvim
-      command:
-        cmd: git submodule update --force --init --recursive --jobs 4
-      changed_when: false
+    # - name: Update all submodules
+    #   tags:
+    #     - nvim
+    #   command:
+    #     cmd: git submodule update --force --init --recursive --jobs 4
+    #   changed_when: false
 
     - name: Standard Command-line Tasks
       tags: cli
