@@ -18,6 +18,7 @@ Plug('numToStr/Comment.nvim')
 Plug('folke/trouble.nvim')
 Plug('f-person/git-blame.nvim')
 Plug('rebelot/kanagawa.nvim')
+Plug('github/copilot.vim')
 
 vim.call('plug#end')
 
