@@ -105,6 +105,10 @@ alias vim='nvim'
 
 alias k='kubectl'
 
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias tmux='tmux -u'
+
 if is_linux; then
   alias ls='ls --color=auto --group-directories-first --time-style=long-iso --human-readable -v'
   alias ll='ls -l'
