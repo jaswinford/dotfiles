@@ -1,3 +1,8 @@
+# github.com/maaslalani/invoice variables
+export INVOICE_FROM="J. Adam Swinford"
+export INVOICE_TAX=0.06
+export INVOICE_RATE=50
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
   export PATH="$PATH:$HOME/.local/bin"
