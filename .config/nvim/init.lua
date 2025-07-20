@@ -1,36 +1,33 @@
-local vim = vim
-local Plug = vim.fn['plug#']
+require("config.lazy")
+vim.o.number = true
+vim.wo.number = true
 
-vim.o.background = 'dark'
+vim.g.mouse = 'a'
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.opt.encoding = 'utf-8'
+
+vim.opt.swapfile = false
+
+vim.opt.scrolloff = 7
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.autoindent = true
+
+vim.opt.fileformat = 'unix'
+
+vim.opt.termguicolors = true
+
+-- Exit terminal
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 
-vim.call('plug#begin')
+-- Map <leader>f to fzf-lua's file search
+vim.keymap.set("n", "<leader>f", require("fzf-lua").files, { desc = "Fzf files" })
+-- Map <leader>g to fzf-lua's live grep
+vim.keymap.set("n", "<leader>g", require("fzf-lua").live_grep, { desc = "Fzf live grep" })
 
-Plug('kyazdani42/nvim-tree.lua')
-Plug('kyazdani42/nvim-web-devicons')
-Plug('romgrk/barbar.nvim')
-Plug('nvim-lualine/lualine.nvim')
-Plug('nvim-lua/plenary.nvim')
--- Plug('nvim-treesitter/nvim-treesitter')
-Plug('nvim-telescope/telescope.nvim')
-Plug('ibhagwan/fzf-lua')
-Plug('numToStr/Comment.nvim')
-Plug('folke/trouble.nvim')
-Plug('f-person/git-blame.nvim')
-Plug('rebelot/kanagawa.nvim')
-Plug('github/copilot.vim')
 
-vim.call('plug#end')
-
-home=os.getenv('HOME')
-package.path = home .. "/.config/nvim/?.lua;" .. package.path
-
-require "common"
-require "theme"
-require "vimtree"
-require "barbar"
-require "lua_line"
--- require "treesitter"
-require "telescope_config"
-require "comment_config"
-require "trouble"
+vim.cmd("colorscheme kanagawa")
