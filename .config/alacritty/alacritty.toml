@@ -36,17 +36,9 @@ color = '#ffa066'
 index = 17
 color = '#ff5d62'
 
-font:
-	normal:
-		family: "JetbrainsMono Nerd Font"
-		style: Regular
-	bold:
-		family: "JetbrainsMono Nerd Font"
-		style: Bold
-	italic:
-		family: "JetbrainsMono Nerd Font"
-		style: Italic
-	bold_italic:
-		family: "JetbrainsMono Nerd Font"
-		style: Bold Italic
-size: 12.0
+[font]
+	normal.family= "JetbrainsMono Nerd Font"
+	bold.family= "JetbrainsMono Nerd Font"
+	italic.family= "JetbrainsMono Nerd Font"
+	bold_italic.family= "JetbrainsMono Nerd Font"
+	size= 12.0
