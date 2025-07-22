@@ -17,6 +17,7 @@
       - git
       - zsh
       - unzip
+      - fonts-jetbrains-mono
       - fonts-powerline
       - tig
       - tmux
@@ -46,6 +47,7 @@
       - python3-pip
       - xclip
       - moreutils
+      - fonts-jetbrains-mono
     state: present
   when: ansible_distribution == "Fedora"
 
@@ -59,6 +61,7 @@
     - jq
     - htop
     - moreutils
+    - font-jetbrains-mono
   community.general.homebrew:
     name: "{{ item }}"
     state: present

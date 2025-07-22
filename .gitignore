@@ -13,3 +13,4 @@ venv
 .config/zed/prompts
 .config/zed/conversations
 .config/JetBrains
+.config/nvim/lazy-lock.json
