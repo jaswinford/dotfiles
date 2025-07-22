@@ -1,33 +1,37 @@
-require("config.lazy")
-vim.o.number = true
-vim.wo.number = true
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
+vim.g.mapleader = " "
 
-vim.g.mouse = 'a'
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- bootstrap lazy and all plugins
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
-vim.opt.encoding = 'utf-8'
+if not vim.uv.fs_stat(lazypath) then
+  local repo = "https://github.com/folke/lazy.nvim.git"
+  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
+end
 
-vim.opt.swapfile = false
+vim.opt.rtp:prepend(lazypath)
 
-vim.opt.scrolloff = 7
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.autoindent = true
+local lazy_config = require "configs.lazy"
 
-vim.opt.fileformat = 'unix'
+-- load plugins
+require("lazy").setup({
+  {
+    "NvChad/NvChad",
+    lazy = false,
+    branch = "v2.5",
+    import = "nvchad.plugins",
+  },
 
-vim.opt.termguicolors = true
+  { import = "plugins" },
+}, lazy_config)
 
--- Exit terminal
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- load theme
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
 
+require "options"
+require "autocmds"
 
--- Map <leader>f to fzf-lua's file search
-vim.keymap.set("n", "<leader>f", require("fzf-lua").files, { desc = "Fzf files" })
--- Map <leader>g to fzf-lua's live grep
-vim.keymap.set("n", "<leader>g", require("fzf-lua").live_grep, { desc = "Fzf live grep" })
-
-
-vim.cmd("colorscheme kanagawa")
+vim.schedule(function()
+  require "mappings"
+end)
