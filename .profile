@@ -33,6 +33,7 @@ if [ -d "$HOME/android-studio/bin" ]; then
   export PATH="$PATH:$HOME/android-studio/bin"
 fi
 
+# java-11-openjdk-amd64
 if [ -x "/usr/lib/jvm/java-11-openjdk-amd64" ]; then
   export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 fi
@@ -83,6 +84,11 @@ fi
 # Add Homebrew
 if [ -d "/opt/homebrew/bin" ]; then
   export PATH="$PATH:/opt/homebrew/bin"
+fi
+
+# Add Snap
+if [ -d "/snap/bin" ] ; then
+  export PATH="$PATH:/snap/bin"
 fi
 
 function is_linux() {
