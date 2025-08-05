@@ -2,6 +2,7 @@
 export INVOICE_FROM="J. Adam Swinford"
 export INVOICE_TAX=0.06
 export INVOICE_RATE=50
+source ~/.openai_api_key
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then

@@ -1,4 +1,0 @@
-- name: Checkout TPM
-  ansible.builtin.git:
-    repo: https://github.com/tmux-plugins/tpm
-    dest: "{{ ansible_env.HOME }}/.tmux/plugins/tpm"

@@ -1,8 +1,0 @@
----
-collections:
-  - name: community.general
-
-roles:
-  - name: elliotweiser.osx-command-line-tools
-  - name: geerlingguy.nodejs
-    version: 6.1.1

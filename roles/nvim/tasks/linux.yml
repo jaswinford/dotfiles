@@ -1,6 +1,0 @@
----
-- name: Install nvim in Ubuntu
-  become: true
-  apt:
-    name:
-      - neovim
