@@ -122,6 +122,9 @@ alias egrep='egrep --color=auto'
 alias tmux='tmux -u'
 alias cm='chezmoi'
 
+# Flatpak aliases
+alias headlamp="flatpak run io.kinvolk.Headlamp"
+
 if is_linux; then
   alias ls='ls --color=auto --group-directories-first --time-style=long-iso --human-readable -v'
   alias ll='ls -l'
