@@ -122,8 +122,16 @@ alias egrep='egrep --color=auto'
 alias tmux='tmux -u'
 alias cm='chezmoi'
 
+# apply ansible environment
+alias apply-env='ansible -K localhost -c local -m include_role -a name=jaswinford.env'
+
 # Flatpak aliases
 alias headlamp="flatpak run io.kinvolk.Headlamp"
+alias chrome="flatpak run com.google.Chrome"
+alias obsidian="flatpak run md.obsidian.Obsidian"
+alias joplin="flatpak run net.cozic.joplin_desktop"
+alias chromium="flatpak run org.chromium.Chromium"
+alias firefox="flatpak run org.mozilla.firefox"
 
 if is_linux; then
   alias ls='ls --color=auto --group-directories-first --time-style=long-iso --human-readable -v'
