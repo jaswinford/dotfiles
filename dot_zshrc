@@ -9,7 +9,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git)
+plugins=(git genpass)
 
 # Load custom aliases and functions
 
@@ -28,3 +28,9 @@ source $ZSH/oh-my-zsh.sh
 source ~/.profile
 
 
+# bun completions
+[ -s "/Users/adam/.bun/_bun" ] && source "/Users/adam/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

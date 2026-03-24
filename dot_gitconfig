@@ -14,5 +14,3 @@
 	autoStash = true
 [credential "https://github.com"]
 	username = jaswinford
-[includeIf "gitdir:~/work/"]
-	path = ~/work/.gitconfig
