@@ -1,0 +1,16 @@
+[user]
+	email = 181854380+jaswinford@users.noreply.github.com
+	name = "Adam Swinford"
+[commit]
+	verbose = true
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[push]
+	default = current
+[rebase]
+	autosquash = true
+	autoStash = true
+[credential "https://github.com"]
+	username = jaswinford

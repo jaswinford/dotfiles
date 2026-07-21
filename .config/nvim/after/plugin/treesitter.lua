@@ -1,0 +1,1 @@
+# require('nvim-treesitter').install { 'bash', 'c_sharp', 'cpp', 'css', 'csv', 'diff', 'dockerfile', 'git_config', 'gitcommit', 'go', 'gomod', 'helm', 'html', 'ini', 'json', 'lua', 'markdown', 'nginx', 'nix', 'php', 'python', 'regex', 'sql', 'swift', 'terraform', 'tmux', 'todotxt', 'toml', 'typescript', 'xml', 'yaml', 'zsh' }

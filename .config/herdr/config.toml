@@ -1,0 +1,10 @@
+onboarding = false
+[ui.toast]
+delivery = "herdr"
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[ui]
+agent_panel_sort = "spaces"

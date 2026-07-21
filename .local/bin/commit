@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Basic commit script using gum
+#
+
+# Check if 'gum' is installed
+if ! command -v gum &>/dev/null; then
+  echo "Error: gum is required but not installed. Exiting." >&2
+  exit 1
+fi
+
+TYPE=$(gum choose "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert")
+
+SCOPE=$(gum input --placeholder "scope")
+
+SUMMARY=$(gum input --value "$TYPE[$SCOPE]: " --placeholder "Summary of this change")
+DESCRIPTION=$(gum write --placeholder "Details of this change")
+
+gum confirm "Commit changes?" && git commit -m "$SUMMARY" -m "$DESCRIPTION"

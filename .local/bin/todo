@@ -1,0 +1,9 @@
+#! bash
+pushd ~/vault/
+git pull
+#sort todo.md -o todo.md
+$EDITOR todo.md
+timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+git add todo.md
+git commit -m "[$(hostname)] $timestamp - Update Todo"
+git push
