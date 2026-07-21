@@ -37,5 +37,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Remove dotfiles readme
 if [ -f ~/README.md ]; then
+  dot update-index --skip-worktree README.md
   rm ~/README.md
 fi
