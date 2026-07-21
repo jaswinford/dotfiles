@@ -121,9 +121,11 @@ export LESS="FXRM"
 
 # alias r='ranger'
 alias vim='nvim'
+alias k='kubectl'
+
+# Emacs related
 alias emacs='emacsclient -c -a ""'
 alias e=emacs
-alias k='kubectl'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
