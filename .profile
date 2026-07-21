@@ -129,6 +129,9 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias tmux='tmux -u'
 
+# GNU Stow alias and setup
+alias dot='$(command -v git) --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
+dot config --local status.showUntrackedFiles no
 alias soft='ssh soft'
 # alias cm='chezmoi'
 
