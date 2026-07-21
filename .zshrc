@@ -34,3 +34,8 @@ source ~/.profile
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Remove dotfiles readme
+if [ -f ~/README.md ]; then
+  rm ~/README.md
+fi
